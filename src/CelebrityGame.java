@@ -31,6 +31,9 @@ public class CelebrityGame {
 		gameCelebrity = null;
 	}
 
+	public CelebrityFrame getGameWindow() {
+		return gameWindow;
+	}
 	/**
 	 * Determines if the supplied guess is correct.
 	 * 
@@ -132,5 +135,11 @@ public class CelebrityGame {
 	 */
 	public String sendAnswer() {
 		return null; // stub
+	}
+
+	public void reset() {
+		celebGameList = new ArrayList<>();
+		gameWindow.replaceScreen("START");
+		gameWindow.getStartPanel().reset();
 	}
 }

@@ -42,6 +42,10 @@ public class CelebrityFrame extends JFrame {
 		startPanel = new StartPanel(controller);
 		setupFrame();
 	}
+
+	public StartPanel getStartPanel() {
+		return startPanel;
+	}
 	
 	/**
 	 * Configures the JFrame window subclass to add the panel and set size based information.
@@ -77,7 +81,6 @@ public class CelebrityFrame extends JFrame {
 			gamePanel.addClue(controller.sendClue());
 			gamePanel.getCountdownTimer().start();
 		}
-
 		// present the appropriate panel based on the name provided in "screen"
 		// (either "START" or "GAME")
 		LayoutManager layout = panelCards.getLayout();
